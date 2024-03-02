@@ -18,6 +18,7 @@ jobs:
   AssumeRoleAndCallIdentity:
     runs-on: ubuntu-latest
     steps:
+      - uses: hashicorp/setup-terraform@v3
       - name: Git clone the repository
         uses: actions/checkout@v3
       - name: configure aws credentials
@@ -29,3 +30,8 @@ jobs:
       - name: Sts GetCallerIdentity
         run: |
           aws sts get-caller-identity
+          
+      - run: terraform init
+
+      - id: plan
+        run: terraform plan -no-color   
