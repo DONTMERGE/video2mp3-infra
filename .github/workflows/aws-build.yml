@@ -30,8 +30,8 @@ jobs:
       - name: Sts GetCallerIdentity
         run: |
           aws sts get-caller-identity
-          
-      - run: terraform init
 
-      - id: plan
-        run: terraform plan -no-color   
+      - name: Deploy
+        uses: gruntwork-io/terragrunt-action@v2
+        with:
+          tg_command: 'plan'
