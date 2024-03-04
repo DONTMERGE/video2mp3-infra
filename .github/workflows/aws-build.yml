@@ -9,6 +9,8 @@ on:
 env:
   
   AWS_REGION : "us-east-1"
+  TF_VERSION : 1.7.4
+  TG_VERSION : 0.55.11 
 
 permissions:
       id-token: write
@@ -34,4 +36,6 @@ jobs:
       - name: Deploy
         uses: gruntwork-io/terragrunt-action@v2
         with:
+          tf_version: ${{ env.TF_VERSION }}
+          tg_version: ${{ env.TG_VERSION }}
           tg_command: 'plan'
