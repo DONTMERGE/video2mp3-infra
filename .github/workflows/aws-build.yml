@@ -17,7 +17,7 @@ permissions:
       contents: read
 
 jobs:
-  Terragrunt_Plan:
+  Terragrunt-SetupValidate:
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
@@ -34,7 +34,7 @@ jobs:
         run: |
           aws sts get-caller-identity
 
-      - name: Plan / Validate
+      - name: Terragrunt Validation
         uses: gruntwork-io/terragrunt-action@v2
         with:
           tf_version: ${{ env.TF_VERSION }}
