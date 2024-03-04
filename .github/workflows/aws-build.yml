@@ -17,25 +17,26 @@ permissions:
       contents: read
 
 jobs:
-  AssumeRoleAndCallIdentity:
+  Terragrunt_Plan:
     runs-on: ubuntu-latest
     steps:
-      - uses: hashicorp/setup-terraform@v3
       - name: Git clone the repository
         uses: actions/checkout@v3
+
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
           role-to-assume: arn:aws:iam::703866956858:role/GITHUB_OIDC_ROLE
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
+
       - name: Sts GetCallerIdentity
         run: |
           aws sts get-caller-identity
 
-      - name: Deploy
+      - name: Plan / Validate
         uses: gruntwork-io/terragrunt-action@v2
         with:
           tf_version: ${{ env.TF_VERSION }}
           tg_version: ${{ env.TG_VERSION }}
-          tg_command: 'plan'
+          tg_command: 'hclfmt --terragrunt-check'
