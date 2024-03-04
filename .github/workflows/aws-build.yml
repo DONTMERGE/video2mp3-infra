@@ -40,3 +40,10 @@ jobs:
           tf_version: ${{ env.TF_VERSION }}
           tg_version: ${{ env.TG_VERSION }}
           tg_command: 'hclfmt --terragrunt-check'
+
+      - name: Terragrunt Validation
+        uses: gruntwork-io/terragrunt-action@v2
+        with:
+          tf_version: ${{ env.TF_VERSION }}
+          tg_version: ${{ env.TG_VERSION }}
+          tg_command: 'plan'
