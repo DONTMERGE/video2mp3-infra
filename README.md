@@ -43,7 +43,7 @@ README.md updated successfully
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.39.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.34.0 |
 
 ## Providers
 
