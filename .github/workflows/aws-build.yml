@@ -8,11 +8,11 @@ on:
   workflow_dispatch:
     inputs:
       choice:
-      type: choice
-      description: Choose an action to execute.
-      options:
-      - apply
-      - destroy
+        type: choice
+        description: Choose an action to execute.
+        options:
+        - apply
+        - destroy
 
 env:
   
