@@ -69,7 +69,7 @@ jobs:
         with:
           tf_version: ${{ env.TF_VERSION }}
           tg_version: ${{ env.TG_VERSION }}
-          tg_command: 'plan'
+          tg_command: 'run-all plan'
 
   Terragrunt-Apply:
     runs-on: ubuntu-latest
@@ -94,7 +94,7 @@ jobs:
         with:
           tf_version: ${{ env.TF_VERSION }}
           tg_version: ${{ env.TG_VERSION }}
-          tg_command: 'plan'
+          tg_command: 'run-all apply'
 
   Terragrunt-Destroy:
     runs-on: ubuntu-latest
@@ -118,4 +118,4 @@ jobs:
         with:
           tf_version: ${{ env.TF_VERSION }}
           tg_version: ${{ env.TG_VERSION }}
-          tg_command: 'plan'
+          tg_command: 'run-all destroy'
