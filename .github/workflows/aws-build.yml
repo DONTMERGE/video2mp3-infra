@@ -6,7 +6,14 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-
+    inputs:
+      choice:
+      type: choice
+      description: Choose an action to execute.
+      options:
+      - apply
+      - destroy
+`
 env:
   
   AWS_REGION : "us-east-1"
@@ -65,7 +72,7 @@ jobs:
           tg_command: 'plan'
 
   Terragrunt-Apply:
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/main' }} || ${{ github.event.inputs.choice }} == 'apply'
     runs-on: ubuntu-latest
     needs: [ Terragrunt-SetupValidate, Terragrunt-Plan ]
     
