@@ -48,3 +48,17 @@ jobs:
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v4
+
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1.7.0
+        with:
+          role-to-assume: arn:aws:iam::703866956858:role/GITHUB_OIDC_ROLE
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Terragrunt Validation
+        uses: gruntwork-io/terragrunt-action@v2
+        with:
+          tf_version: ${{ env.TF_VERSION }}
+          tg_version: ${{ env.TG_VERSION }}
+          tg_command: 'plan'
