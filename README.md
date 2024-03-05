@@ -43,7 +43,7 @@ README.md updated successfully
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.34.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.39.1 |
 
 ## Providers
 
@@ -51,7 +51,9 @@ No providers.
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_aws_cognito_user_pool_simple_example"></a> [aws\_cognito\_user\_pool\_simple\_example](#module\_aws\_cognito\_user\_pool\_simple\_example) | lgallard/cognito-user-pool/aws | n/a |
 
 ## Resources
 
