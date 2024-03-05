@@ -43,6 +43,7 @@ jobs:
 
   Terragrunt-Plan:
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/master' }}
     needs: Terragrunt-SetupValidate
     
     steps:
