@@ -72,7 +72,7 @@ jobs:
           tg_command: 'plan'
 
   Terragrunt-Apply:
-    if: ($GITHUB_EVENT_NAME" == 'push' && ${{ github.ref == 'refs/heads/main' }}) || ($GITHUB_EVENT_NAME" == 'workflow_dispatch' && ${{ github.event.inputs.choice }} == 'destroy')
+    if: ($GITHUB_EVENT_NAME == 'push' && ${{ github.ref == 'refs/heads/main' }}) || ($GITHUB_EVENT_NAME == 'workflow_dispatch' && ${{ github.event.inputs.choice }} == 'destroy')
     needs: [ Terragrunt-SetupValidate, Terragrunt-Plan ]
     
     steps:
