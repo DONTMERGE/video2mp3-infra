@@ -43,6 +43,8 @@ jobs:
 
   Terragrunt-Plan:
     runs-on: ubuntu-latest
+    needs: Terragrunt-SetupValidate
+    
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v4
