@@ -1,4 +1,4 @@
-module "aws_cognito_user_pool_simple_example" {
+module "aws_cognito_user_pool" {
 
   source = "lgallard/cognito-user-pool/aws"
 
