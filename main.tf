@@ -5,9 +5,5 @@ module "aws_cognito_user_pool" {
   user_pool_name = var.user_pool_name
 
   # tags
-  tags = {
-    Owner       = "infra"
-    Environment = "video2mp3-infra"
-    Terraform   = true
-  }
+  tags = var.tags
 }

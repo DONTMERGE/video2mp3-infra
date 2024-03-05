@@ -17,5 +17,6 @@ EOF
 }
 
 inputs = {
-
+  user_pool_name = local.values.locals.user_pool_name
+  tags           = local.values.locals.tags
 }
