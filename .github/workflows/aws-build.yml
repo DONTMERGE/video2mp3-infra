@@ -72,8 +72,7 @@ jobs:
           tg_command: 'plan'
 
   Terragrunt-Apply:
-    if: ${{ github.ref == 'refs/heads/main' }} || ${{ github.event.inputs.choice }} == 'destroy'
-    runs-on: ubuntu-latest
+    if: ($GITHUB_EVENT_NAME" == 'push' && ${{ github.ref == 'refs/heads/main' }}) || ($GITHUB_EVENT_NAME" == 'workflow_dispatch' && ${{ github.event.inputs.choice }} == 'destroy')
     needs: [ Terragrunt-SetupValidate, Terragrunt-Plan ]
     
     steps:
@@ -87,12 +86,9 @@ jobs:
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Get event_name by env var
-        run: echo "Event name $GITHUB_EVENT_NAME"
-
       - name: Terragrunt Apply Step
         uses: gruntwork-io/terragrunt-action@v2
         with:
           tf_version: ${{ env.TF_VERSION }}
           tg_version: ${{ env.TG_VERSION }}
-          tg_command: 'apply'
+          tg_command: 'plan'
