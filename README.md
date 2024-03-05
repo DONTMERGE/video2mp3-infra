@@ -53,7 +53,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_aws_cognito_user_pool_simple_example"></a> [aws\_cognito\_user\_pool\_simple\_example](#module\_aws\_cognito\_user\_pool\_simple\_example) | lgallard/cognito-user-pool/aws | n/a |
+| <a name="module_aws_cognito_user_pool"></a> [aws\_cognito\_user\_pool](#module\_aws\_cognito\_user\_pool) | lgallard/cognito-user-pool/aws | n/a |
 
 ## Resources
 
@@ -65,5 +65,7 @@ No inputs.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_user_pool_arn"></a> [user\_pool\_arn](#output\_user\_pool\_arn) | ARN of the Cognito User Pool created. |
 <!-- END_TF_DOCS -->

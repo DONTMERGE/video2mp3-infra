@@ -21,5 +21,7 @@ No inputs.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_user_pool_name"></a> [user\_pool\_name](#output\_user\_pool\_name) | Amazon Resource Name (ARN) of VPC |
 <!-- END_TF_DOCS -->
