@@ -74,12 +74,11 @@ jobs:
   Terragrunt-Apply:
     runs-on: ubuntu-latest
     needs: [ Terragrunt-SetupValidate, Terragrunt-Plan ]
-    if: |
-      ${{ 
-        ($GITHUB_EVENT_NAME == 'push' && ${{ github.ref == 'refs/heads/main' }}) 
+    if: | 
+      ( $GITHUB_EVENT_NAME == 'push' && github.ref == 'refs/heads/main' ) 
         || 
-        ($GITHUB_EVENT_NAME == 'workflow_dispatch' && ${{ github.event.inputs.choice }} == 'destroy')
-      }}
+      ( $GITHUB_EVENT_NAME == 'workflow_dispatch' &&  github.event.inputs.choice == 'destroy')
+
 
     steps:
       - name: Git clone the repository
