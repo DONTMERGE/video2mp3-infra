@@ -48,7 +48,9 @@ README.md updated successfully
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.39.1 |
 
 ## Modules
 
@@ -58,7 +60,9 @@ No providers.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [aws_cognito_user_pool_client.video2mp3_client](https://registry.terraform.io/providers/hashicorp/aws/5.39.1/docs/resources/cognito_user_pool_client) | resource |
 
 ## Inputs
 
