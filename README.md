@@ -1,5 +1,6 @@
 # VIDEO2MP3-INFRA Repo
 
+[![Terraform Execution Pipeline.](https://github.com/DONTMERGE/video2mp3-infra/actions/workflows/aws-build.yml/badge.svg)](https://github.com/DONTMERGE/video2mp3-infra/actions/workflows/aws-build.yml) [![Update Terraform Docs](https://github.com/DONTMERGE/video2mp3-infra/actions/workflows/docs.yml/badge.svg)](https://github.com/DONTMERGE/video2mp3-infra/actions/workflows/docs.yml) [![Create a Release](https://github.com/DONTMERGE/video2mp3-infra/actions/workflows/release.yml/badge.svg)](https://github.com/DONTMERGE/video2mp3-infra/actions/workflows/release.yml)
 
 ### Template Repo Initialization
 #### terragrunt init
