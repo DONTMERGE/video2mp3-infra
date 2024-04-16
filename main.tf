@@ -16,7 +16,7 @@ resource "aws_cognito_user_pool_client" "video2mp3_client" {
 module "s3_bucket" {
   source = "terraform-aws-modules/s3-bucket/aws"
 
-  bucket_prefix = "Video2MP3Infra_Bucket-Serverless_ENV-"
+  bucket_prefix = "video2mp3infra-"
   force_destroy = true
 
   # S3 bucket-level Public Access Block configuration
@@ -40,7 +40,6 @@ module "s3_bucket" {
 
 resource "aws_signer_signing_profile" "video2mp3" {
   platform_id = "AWSLambda-SHA384-ECDSA"
-  # invalid value for name (must be alphanumeric with max length of 64 characters)
   name = "video2mp3_infra"
 
   signature_validity_period {
