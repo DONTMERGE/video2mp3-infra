@@ -73,9 +73,9 @@ jobs:
 
   Terragrunt-Apply:
     runs-on: ubuntu-latest
-    needs: [ Terragrunt-SetupValidate, Terragrunt-Plan ]
     permissions:
       contents: write
+    needs: [ Terragrunt-SetupValidate, Terragrunt-Plan ]
     if: | 
       ( github.event_name == 'push' && github.ref == 'refs/heads/main' ) || 
       ( github.event_name == 'workflow_dispatch' &&  github.event.inputs.choice == 'apply')
