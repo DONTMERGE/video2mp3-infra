@@ -1,5 +1,5 @@
-resource "aws_iam_role" "role" {
-  name = "role"
+resource "aws_iam_role" "lambda_role" {
+  name = "lambda_role"
   managed_policy_arns = [
     aws_iam_policy.policy.arn
   ]
@@ -22,8 +22,8 @@ resource "aws_iam_role" "role" {
   }
 }
 
-resource "aws_iam_policy" "policy" {
-  name        = "policy"
+resource "aws_iam_policy" "lambda_policy" {
+  name        = "lambda_policy"
   description = "My policy"
 
   policy = jsonencode({
