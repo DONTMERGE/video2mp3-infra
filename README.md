@@ -60,6 +60,7 @@ README.md updated successfully
 |------|--------|---------|
 | <a name="module_aws_cognito_user_pool"></a> [aws\_cognito\_user\_pool](#module\_aws\_cognito\_user\_pool) | lgallard/cognito-user-pool/aws | n/a |
 | <a name="module_iam"></a> [iam](#module\_iam) | ./modules/iam | n/a |
+| <a name="module_lambda"></a> [lambda](#module\_lambda) | ./modules/lambda | n/a |
 | <a name="module_s3_bucket"></a> [s3\_bucket](#module\_s3\_bucket) | terraform-aws-modules/s3-bucket/aws | n/a |
 
 ## Resources
