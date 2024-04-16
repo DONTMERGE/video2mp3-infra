@@ -16,7 +16,7 @@ resource "aws_cognito_user_pool_client" "video2mp3_client" {
 module "s3_bucket" {
   source = "  "
 
-  bucket = "Artifact_Code_Bucket"
+  bucket_prefix = "Video2MP3Infra"
   force_destroy = true
 
   # S3 bucket-level Public Access Block configuration
