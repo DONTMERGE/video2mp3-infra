@@ -5,7 +5,9 @@ No requirements.
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
 
 ## Modules
 
@@ -13,7 +15,9 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [archive_file.lambda_get_api](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) | data source |
 
 ## Inputs
 
