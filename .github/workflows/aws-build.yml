@@ -96,6 +96,9 @@ jobs:
           tg_version: ${{ env.TG_VERSION }}
           tg_command: 'run-all apply'
 
+      - name: Commit changes to the repository
+        uses: stefanzweifel/git-auto-commit-action@v4
+
   Terragrunt-Destroy:
     runs-on: ubuntu-latest
     needs: [ Terragrunt-SetupValidate, Terragrunt-Plan ]
