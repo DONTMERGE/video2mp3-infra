@@ -49,5 +49,5 @@ resource "aws_signer_signing_profile" "video2mp3" {
 }
 
 module "iam" {
-  source         = "modules/iam"
+  source         = "./modules/iam"
 }
