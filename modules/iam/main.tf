@@ -1,7 +1,7 @@
 resource "aws_iam_role" "lambda_role" {
   name = "lambda_role"
   managed_policy_arns = [
-    aws_iam_policy.policy.arn
+    aws_iam_policy.lambda_policy.arn
   ]
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
