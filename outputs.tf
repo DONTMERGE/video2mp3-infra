@@ -22,3 +22,13 @@ output "code_s3_bucket" {
   value       = module.s3_bucket.s3_bucket_arn
   description = "Name of the AWS S3 Bucket."
 }
+
+output "iam_role" {
+  value       = module.iam.iam_role_arn
+  description = "IAM Role ARN for Lambda Functions."
+}
+
+output "iam_policy" {
+  value       =  module.iam.iam_policy_arn
+  description = "IAM Policy for Lambda Functions."
+}

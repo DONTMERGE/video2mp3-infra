@@ -47,3 +47,7 @@ resource "aws_signer_signing_profile" "video2mp3" {
     type  = "MONTHS"
   }
 }
+
+module "iam" {
+  source         = "modules/iam"
+}
