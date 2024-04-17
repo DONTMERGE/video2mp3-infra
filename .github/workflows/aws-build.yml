@@ -73,8 +73,6 @@ jobs:
 
   Terragrunt-Apply:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     needs: [ Terragrunt-SetupValidate, Terragrunt-Plan ]
     if: | 
       ( github.event_name == 'push' && github.ref == 'refs/heads/main' ) || 
@@ -97,9 +95,6 @@ jobs:
           tf_version: ${{ env.TF_VERSION }}
           tg_version: ${{ env.TG_VERSION }}
           tg_command: 'run-all apply'
-
-      - name: Commit changes to the repository
-        uses: stefanzweifel/git-auto-commit-action@v4
 
   Terragrunt-Destroy:
     runs-on: ubuntu-latest
