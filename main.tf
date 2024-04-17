@@ -54,4 +54,5 @@ module "iam" {
 
 module "lambda" {
   source         = "./modules/lambda"
+  s3_bucket_id   = module.s3_bucket.s3_bucket_id
 }
