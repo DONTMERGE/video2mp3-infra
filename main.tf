@@ -40,7 +40,7 @@ module "s3_bucket" {
 
 resource "aws_signer_signing_profile" "video2mp3" {
   platform_id = "AWSLambda-SHA384-ECDSA"
-  name = "video2mp3_infra"
+  name        = "video2mp3_infra"
 
   signature_validity_period {
     value = 3
@@ -49,10 +49,12 @@ resource "aws_signer_signing_profile" "video2mp3" {
 }
 
 module "iam" {
-  source         = "./modules/iam"
+  source = "./modules/iam"
 }
 
 module "lambda" {
-  source         = "./modules/lambda"
-  s3_bucket_id   = module.s3_bucket.s3_bucket_id
+  source                     = "./modules/lambda"
+  s3_bucket_id               = module.s3_bucket.s3_bucket_id
+  signer_profile             = aws_signer_signing_profile.video2mp3.name
+  signer_profile_version_arn = aws_signer_signing_profile.video2mp3.version_arn
 }

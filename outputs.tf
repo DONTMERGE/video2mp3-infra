@@ -29,6 +29,6 @@ output "iam_role" {
 }
 
 output "iam_policy" {
-  value       =  module.iam.iam_policy_arn
+  value       = module.iam.iam_policy_arn
   description = "IAM Policy for Lambda Functions."
 }
