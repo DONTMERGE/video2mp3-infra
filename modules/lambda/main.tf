@@ -5,7 +5,7 @@ data "archive_file" "lambda_get_api" {
 }
 
 resource "aws_s3_object" "lambda_get_api" {
-  key                    = "unsigned"
+  key                    = "unsigned/get_api.zip"
   bucket                 = var.s3_bucket_id
   source                 = "${path.module}/code/get_api.zip"
   server_side_encryption = "AES256"
