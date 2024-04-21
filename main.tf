@@ -16,7 +16,7 @@ resource "aws_cognito_user_pool_client" "video2mp3_client" {
 module "s3_bucket" {
   source = "terraform-aws-modules/s3-bucket/aws"
 
-  bucket_prefix = "Infra-Video-2-MP3-"
+  bucket_prefix = "Infra-Code-video2mp3-"
   force_destroy = true
 
   # S3 bucket-level Public Access Block configuration
