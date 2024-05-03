@@ -83,7 +83,4 @@ README.md updated successfully
 | <a name="output_code_s3_bucket"></a> [code\_s3\_bucket](#output\_code\_s3\_bucket) | Name of the AWS S3 Bucket. |
 | <a name="output_iam_policy"></a> [iam\_policy](#output\_iam\_policy) | IAM Policy for Lambda Functions. |
 | <a name="output_iam_role"></a> [iam\_role](#output\_iam\_role) | IAM Role ARN for Lambda Functions. |
-| <a name="output_user_pool_arn"></a> [user\_pool\_arn](#output\_user\_pool\_arn) | ARN of the Cognito User Pool created. |
-| <a name="output_user_pool_creation_date"></a> [user\_pool\_creation\_date](#output\_user\_pool\_creation\_date) | Date the Cognito User Pool was created. |
-| <a name="output_user_pool_name"></a> [user\_pool\_name](#output\_user\_pool\_name) | Name of the Cognito User Pool created. |
 <!-- END_TF_DOCS -->
